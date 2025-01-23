@@ -1,0 +1,109 @@
+
+@charset "UTF-8";
+body{
+	
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+
+.container
+{
+height:10cm;
+width:13cm;
+border-width:3px;
+border-color:black;
+border-radius: 5px;
+text-align: center;
+margin-left: 13cm;
+margin-top:3cm;
+padding-bottom: 20px;
+}
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+	
+	text-align:center;
+	color:"white";
+    width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input[type="date"]{
+	text-align:center;
+	color:"white";
+	width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input[type="time"]{
+	text-align:center;
+	color:"white";
+	width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input[type="number"] {
+	text-align:center;
+	color:"white";
+    width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input[type="email"]{
+	text-align:center;
+	color:"white";
+width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}	
+
+input[type="address"]{
+	text-align:center;
+	color:"white";
+width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;	
+}
+input[type="submit"]{
+	text-align:center;
+	padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+h1{
+	text-align: center;
+	font-size: 50px;
+}
+

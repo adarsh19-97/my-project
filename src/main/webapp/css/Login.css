@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body{
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.container
+{
+height:6cm;
+width:10cm;
+border-width:3px;
+border-color:black;
+background-color:#f7d1bd69;
+ border-radius: 10px;
+text-align: center;
+margin-left: 15cm;
+padding-bottom: 20px;
+}
+form {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+input[type="password"]{
+	width: 50%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
