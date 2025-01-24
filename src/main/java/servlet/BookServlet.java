@@ -1,25 +1,27 @@
+package servlet;
 
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import database.DataOperations;
+import database.JdbcConnection;
+
 /**
- * Servlet implementation class MusicServ
+ * Servlet implementation class Book
  */
-@WebServlet("/RegisterServlet")
-public class RegisterServlet extends HttpServlet {
+@WebServlet("/BookServlet")
+public class BookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterServlet() {
+    public BookServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,33 +39,20 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name=request.getParameter("Name");
-		String email=request.getParameter("Email");
-		String password=request.getParameter("Password");
+		String venue=request.getParameter("Venue");
+		String date=request.getParameter("Date");
+		String time=request.getParameter("Time");
+	    String email=request.getParameter("Email");
 	    String mobilenumber=request.getParameter("MobileNumber");
+	    String address=request.getParameter("Address");
 	    
 	    Long phn=Long.parseLong(mobilenumber);
 	    JdbcConnection jdbc =new JdbcConnection();
-	    DataOperations da=new DataOperations(jdbc.getConnection());
-		da.createTable();
-		da.insertData(name,email,password,phn);
-		response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        out.println("<html>");
-        out.println("<head>");
-        out.println("<title>Login Failed</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<script type='text/javascript'>");
-        out.println("alert('Registered Successfully');");
-        out.println("window.location.href = 'Login.jsp';"); // Redirect back to login page
-        out.println("</script>");
-        out.println("</body>");
-        out.println("</html>");
-
-        out.close();
-		response.sendRedirect("Login.jsp");
+	    DataOperations data=new DataOperations(jdbc.getConnection());
+		data.createTable2();
+		data.insertData1(venue,date,time,email,phn,address);
+		
+		response.sendRedirect("Payment.jsp");
 		doGet(request, response);
 	}
 

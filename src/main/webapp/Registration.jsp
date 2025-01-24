@@ -10,7 +10,7 @@
 <body background="images/register.jpg"> 
 <center><h1>Welcome to Music World</h1> <br>
 <h2>Registration</h2><br></center>
-<div class="container">
+<div class="container">1-+* 
 <form action="RegisterServlet" method="post">
   Enter your name:  <input type="text" name="Name" /> <br>
   Enter your Email: <input type="text" name="Email"/><br>

@@ -1,3 +1,4 @@
+package servlet;
 
 
 import java.io.IOException;
@@ -8,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Book
+ * Servlet implementation class HomepageServlet
  */
-@WebServlet("/BookServlet")
-public class BookServlet extends HttpServlet {
+@WebServlet("/HomepageServlet")
+public class HomepageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BookServlet() {
+    public HomepageServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,20 +36,6 @@ public class BookServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String venue=request.getParameter("Venue");
-		String date=request.getParameter("Date");
-		String time=request.getParameter("Time");
-	    String email=request.getParameter("Email");
-	    String mobilenumber=request.getParameter("MobileNumber");
-	    String address=request.getParameter("Address");
-	    
-	    Long phn=Long.parseLong(mobilenumber);
-	    JdbcConnection jdbc =new JdbcConnection();
-	    DataOperations data=new DataOperations(jdbc.getConnection());
-		data.createTable2();
-		data.insertData1(venue,date,time,email,phn,address);
-		
-		response.sendRedirect("Payment.jsp");
 		doGet(request, response);
 	}
 

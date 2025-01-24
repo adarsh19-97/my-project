@@ -1,3 +1,4 @@
+package database;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,6 +8,9 @@ import java.sql.Statement;
 
 public class DataOperations {
 private Connection conn;
+public DataOperations() {
+    // Default constructor logic (if any)
+}
 public DataOperations(Connection conn) {
 	this.conn=conn;
 }
@@ -73,4 +77,16 @@ public void insertData1(String venue, String date,String time,String email,Long 
 		e.printStackTrace();
 	}
 }
+public ResultSet getTable() throws SQLException {
+	JdbcConnection db=new JdbcConnection();
+	Connection conn=db.getConnection();
+	Statement statement=conn.createStatement();	
+
+	String query="select * from user";
+	ResultSet rs=statement.executeQuery(query);
+	
+	return rs;
+}
+
+
 }
